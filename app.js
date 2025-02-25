@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 app.use(
   cors({
-    origin: "https://wanderlust-ehk0.onrender.com", 
+    origin: "*", 
     credentials: true, 
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH"], 
     allowedHeaders: ["Content-Type", "Authorization"],
