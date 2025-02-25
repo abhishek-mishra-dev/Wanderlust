@@ -31,9 +31,13 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 app.use(
   cors({
-    origin: "https://wanderlust-ehk0.onrender.com",
+    origin: "https://wanderlust-ehk0.onrender.com", 
+    credentials: true, 
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"], 
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
 
 const dbUrl = process.env.ATLASDB_URL;
 
