@@ -12,7 +12,7 @@ router
   .route("/")
   .get(wrapAsync(listingController.index))
   .post(
-    console.log(""Request Body:", req.body);    isLoggedIn,
+    isLoggedIn,
     upload.single("listing[image]"),
     validateListing,
     wrapAsync(listingController.createListing)
